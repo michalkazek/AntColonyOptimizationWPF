@@ -24,5 +24,10 @@ namespace AntColonyOptimizationWPF
         {
             InitializeComponent();
         }
+
+        private void btnStart_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
