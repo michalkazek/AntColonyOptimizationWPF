@@ -8,15 +8,17 @@
         Title="NewTaskWindow" Height="500" Width="400">
     <Grid>
         <TextBlock x:Name="lblIntroduction"  TextAlignment="Center" Text="Dodawanie polecenia" HorizontalAlignment="Left" Margin="50,30,0,0" VerticalAlignment="Top" Height="50" Width="300" FontSize="30" TextWrapping="WrapWithOverflow"/>
-        <Label x:Name="lblFileName" Content="Analizowany plik" HorizontalAlignment="Left" Margin="40,120,0,0" VerticalAlignment="Top" FontSize="16"/>
-        <Label x:Name="lblAlfa" Content="Parametr α" HorizontalAlignment="Left" Margin="40,170,0,0" VerticalAlignment="Top" FontSize="16"/>
-        <TextBox x:Name="txtAlfa" HorizontalAlignment="Left" Height="25" Margin="260,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="65" FontSize="14" BorderBrush="Black" TextAlignment="Right"/>
-        <Label x:Name="lblBeta" Content="Parametr β" HorizontalAlignment="Left" Margin="40,220,0,0" VerticalAlignment="Top" FontSize="16"/>
-        <TextBox x:Name="txtBeta" HorizontalAlignment="Left" Height="25" Margin="260,225,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="65" FontSize="14" BorderBrush="Black" TextAlignment="Right"/>
-        <Label x:Name="lblNumberOfAnts" Content="Liczba mrówek" HorizontalAlignment="Left" Margin="40,270,0,0" VerticalAlignment="Top" FontSize="16"/>
-        <TextBox x:Name="txtNumberOfAnts" HorizontalAlignment="Left" Height="25" Margin="260,275,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="65" FontSize="14" BorderBrush="Black" TextAlignment="Right"/>
-        <Label x:Name="lblNumberOfIterations" Content="Liczba iteracji" HorizontalAlignment="Left" Margin="40,320,0,0" VerticalAlignment="Top" FontSize="16"/>
-        <TextBox x:Name="txtNumberOfIterations" HorizontalAlignment="Left" Height="25" Margin="260,325,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="65" FontSize="14" BorderBrush="Black" TextAlignment="Right"/>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="263,375,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
+        <Label x:Name="lblFileName" Content="Analizowany plik" HorizontalAlignment="Left" Margin="40,100,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label x:Name="lblAlfa" Content="Parametr α" HorizontalAlignment="Left" Margin="40,150,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="txtAlfa" HorizontalAlignment="Left" Height="25" Margin="260,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="65" FontSize="14" BorderBrush="Black" TextAlignment="Right"/>
+        <Label x:Name="lblBeta" Content="Parametr β" HorizontalAlignment="Left" Margin="40,200,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="txtBeta" HorizontalAlignment="Left" Height="25" Margin="260,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="65" FontSize="14" BorderBrush="Black" TextAlignment="Right"/>
+        <Label x:Name="lblNumberOfAnts" Content="Liczba mrówek" HorizontalAlignment="Left" Margin="40,250,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="txtNumberOfAnts" HorizontalAlignment="Left" Height="25" Margin="260,255,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="65" FontSize="14" BorderBrush="Black" TextAlignment="Right"/>
+        <Label x:Name="lblNumberOfIterations" Content="Liczba iteracji" HorizontalAlignment="Left" Margin="40,300,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="txtNumberOfIterations" HorizontalAlignment="Left" Height="25" Margin="260,305,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="65" FontSize="14" BorderBrush="Black" TextAlignment="Right"/>
+        <Label x:Name="lblNumberOfRepetitions" Content="Liczba powtórzeń" HorizontalAlignment="Left" Margin="40,350,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="txtNumberOfRepetitions" HorizontalAlignment="Left" Height="25" Margin="260,355,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="65" FontSize="14" BorderBrush="Black" TextAlignment="Right"/>
+        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="260,425,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
     </Grid>
 </Window>
