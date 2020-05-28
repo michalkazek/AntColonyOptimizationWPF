@@ -25,16 +25,16 @@ namespace AntColonyOptimizationWPF
 
         private void btnAddNewTask_Click(object sender, RoutedEventArgs e)
         {
-            var collection = new List<TextBox>() {txtAlfa, txtBeta, txtNumberOfAnts, txtNumberOfIterations, txtNumberOfRepetitions};
-            var intCollection = new List<int>();
+            var textBoxCollection = new List<TextBox>() {txtAlfa, txtBeta, txtNumberOfAnts, txtNumberOfIterations, txtNumberOfRepetitions};
+            var inputValuesCollection = new List<int>();
             int output;
 
-            foreach (var item in collection)
+            foreach (var item in textBoxCollection)
             {                
                 if (int.TryParse(item.Text, out output) && output > 0)
                 {
                     item.BorderBrush = Brushes.Black;
-                    intCollection.Add(output);                    
+                    inputValuesCollection.Add(output);                    
                 }
                 else
                 {
@@ -44,19 +44,34 @@ namespace AntColonyOptimizationWPF
                 }
             }
 
-            if (intCollection.Count == 5)
+            if (inputValuesCollection.Count == 5)
             {
                 mainMenuPage.dgTaskList.Items.Add(new
                 {
-                    Alfa = intCollection[0],
-                    Beta = intCollection[1],
-                    NumberOfAnts = intCollection[2],
-                    NumberOfIterations = intCollection[3],
-                    NumberOfRepetitons = intCollection[4]
+                    Alfa = inputValuesCollection[0],
+                    Beta = inputValuesCollection[1],
+                    NumberOfAnts = inputValuesCollection[2],
+                    NumberOfIterations = inputValuesCollection[3],
+                    NumberOfRepetitons = inputValuesCollection[4]
                 });
                 txtAddingResultMessage.Text = "Dodawanie zakończone powodzeniem!";
                 txtAddingResultMessage.Foreground = Brushes.Green;
             }            
+        }
+
+        private void btnPickFile_Click(object sender, RoutedEventArgs e)
+        {
+            var dlg = new Microsoft.Win32.OpenFileDialog();
+            dlg.FileName = "Document"; // Default file name
+            dlg.DefaultExt = ".txt"; // Default file extension
+            dlg.Filter = "Text documents (.txt)|*.txt"; // Filter files by extension
+
+            var result = dlg.ShowDialog();
+            if (result == true)
+            {
+                txtFileName.Text = dlg.SafeFileName;
+                //txtFileName.Text = dlg.FileName;
+            }
         }
     }    
 }

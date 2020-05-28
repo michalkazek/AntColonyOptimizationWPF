@@ -9,6 +9,8 @@
     <Grid>
         <TextBlock x:Name="lblIntroduction"  TextAlignment="Center" Text="Dodawanie polecenia" HorizontalAlignment="Left" Margin="50,30,0,0" VerticalAlignment="Top" Height="50" Width="300" FontSize="30" TextWrapping="WrapWithOverflow"/>
         <Label x:Name="lblFileName" Content="Analizowany plik" HorizontalAlignment="Left" Margin="40,100,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="txtFileName" HorizontalAlignment="Left" Height="25" Margin="220,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="105" FontSize="14" BorderBrush="Black" TextAlignment="Right"/>
+        <Button x:Name="btnPickFile" HorizontalAlignment="Left" Margin="342,105,0,0" VerticalAlignment="Top" Width="25" Height="25" Click="btnPickFile_Click"/>
         <Label x:Name="lblAlfa" Content="Parametr α" HorizontalAlignment="Left" Margin="40,150,0,0" VerticalAlignment="Top" FontSize="16"/>
         <TextBox x:Name="txtAlfa" HorizontalAlignment="Left" Height="25" Margin="260,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="65" FontSize="14" BorderBrush="Black" TextAlignment="Right"/>
         <Label x:Name="lblBeta" Content="Parametr β" HorizontalAlignment="Left" Margin="40,200,0,0" VerticalAlignment="Top" FontSize="16"/>
@@ -21,6 +23,6 @@
         <TextBox x:Name="txtNumberOfRepetitions" HorizontalAlignment="Left" Height="25" Margin="260,355,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="65" FontSize="14" BorderBrush="Black" TextAlignment="Right"/>
         <TextBlock x:Name="txtAddingResultMessage"  TextAlignment="Center" Text="" HorizontalAlignment="Left" Margin="50,405,0,0" VerticalAlignment="Top" Height="30" Width="300" FontSize="16" TextWrapping="WrapWithOverflow"/>
         <Button x:Name="btnAddNewTask" Content="Dodaj" HorizontalAlignment="Left" Margin="250,450,0,0" VerticalAlignment="Top" Width="90" Click="btnAddNewTask_Click" Height="40" FontSize="16" Background="#FF9EDE68"/>
-    
+
     </Grid>
 </Window>
