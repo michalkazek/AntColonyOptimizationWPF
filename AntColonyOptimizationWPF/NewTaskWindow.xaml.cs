@@ -34,11 +34,13 @@ namespace AntColonyOptimizationWPF
                 if (int.TryParse(item.Text, out output) && output > 0)
                 {
                     item.BorderBrush = Brushes.Black;
-                    intCollection.Add(output);
+                    intCollection.Add(output);                    
                 }
                 else
                 {
                     item.BorderBrush = Brushes.Red;
+                    txtAddingResultMessage.Text = "Dodawanie nie powiodło się.";
+                    txtAddingResultMessage.Foreground = Brushes.Red;
                 }
             }
 
@@ -52,6 +54,8 @@ namespace AntColonyOptimizationWPF
                     NumberOfIterations = intCollection[3],
                     NumberOfRepetitons = intCollection[4]
                 });
+                txtAddingResultMessage.Text = "Dodawanie zakończone powodzeniem!";
+                txtAddingResultMessage.Foreground = Brushes.Green;
             }            
         }
     }    

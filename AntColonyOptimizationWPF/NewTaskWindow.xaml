@@ -19,7 +19,7 @@
         <TextBox x:Name="txtNumberOfIterations" HorizontalAlignment="Left" Height="25" Margin="260,305,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="65" FontSize="14" BorderBrush="Black" TextAlignment="Right"/>
         <Label x:Name="lblNumberOfRepetitions" Content="Liczba powtórzeń" HorizontalAlignment="Left" Margin="40,350,0,0" VerticalAlignment="Top" FontSize="16"/>
         <TextBox x:Name="txtNumberOfRepetitions" HorizontalAlignment="Left" Height="25" Margin="260,355,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="65" FontSize="14" BorderBrush="Black" TextAlignment="Right"/>
-        <TextBlock x:Name="txtAddingResultMessage"  TextAlignment="Center" Text="" HorizontalAlignment="Left" Margin="50,405,0,0" VerticalAlignment="Top" Height="30" Width="300" FontSize="18" TextWrapping="WrapWithOverflow"/>
+        <TextBlock x:Name="txtAddingResultMessage"  TextAlignment="Center" Text="" HorizontalAlignment="Left" Margin="50,405,0,0" VerticalAlignment="Top" Height="30" Width="300" FontSize="16" TextWrapping="WrapWithOverflow"/>
         <Button x:Name="btnAddNewTask" Content="Dodaj" HorizontalAlignment="Left" Margin="250,450,0,0" VerticalAlignment="Top" Width="90" Click="btnAddNewTask_Click" Height="40" FontSize="16" Background="#FF9EDE68"/>
     
     </Grid>
