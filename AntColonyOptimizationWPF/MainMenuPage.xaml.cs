@@ -24,5 +24,20 @@ namespace AntColonyOptimizationWPF
         {
             InitializeComponent();
         }
+
+        private void btnAddNewTask_Click(object sender, RoutedEventArgs e)
+        {
+           // var test = new Task { FileName= = };
+           // dgTaskList.Items.Add(test);
+        }
     }
+    public class Task
+    {
+        public string FileName { get; set; }
+        public int Alfa { get; set; }
+        public int Beta { get; set; }
+        public int NumberOfAnts { get; set; }
+        public int NumberOfIterations { get; set; }
+    }
+
 }

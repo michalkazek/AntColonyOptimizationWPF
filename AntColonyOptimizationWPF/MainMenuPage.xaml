@@ -9,10 +9,18 @@
       Title="MainMenuPage">
 
     <Grid>
-        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="217" Margin="97,53,0,0" VerticalAlignment="Top" Width="409">
-            <ListBoxItem Content="ListBoxItem"/>
-            <ListBoxItem Content="ListBoxItem"/>
-        </ListBox>
+        <TextBlock x:Name="lblIntroduction"  TextAlignment="Center" Text="Lista poleceń" HorizontalAlignment="Left" Margin="200,40,0,0" VerticalAlignment="Top" Height="50" Width="200" FontSize="30" TextWrapping="WrapWithOverflow"/>
+        <Button x:Name="btnAddNewTask" Content="Button" HorizontalAlignment="Left" Margin="506,132,0,0" VerticalAlignment="Top" Width="58" Height="45" Click="btnAddNewTask_Click"/>
+        <DataGrid x:Name="dgTaskList" HorizontalAlignment="Left" Margin="58,114,0,0" VerticalAlignment="Top" Height="297" Width="422" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=Id}" ClipboardContentBinding="{x:Null}" Header="ID" HeaderStringFormat=""/>
+                <DataGridTextColumn Binding="{Binding Path=FileName}" ClipboardContentBinding="{x:Null}" Header="Nazwa pliku"/>
+                <DataGridTextColumn Binding="{Binding Path=Alfa}" ClipboardContentBinding="{x:Null}" Header="Alfa"/>
+                <DataGridTextColumn Binding="{Binding Path=Beta}" ClipboardContentBinding="{x:Null}" Header="Beta"/>
+                <DataGridTextColumn Binding="{Binding Path=NumberOfAnts}" ClipboardContentBinding="{x:Null}" Header="Liczba mrówek"/>
+                <DataGridTextColumn Binding="{Binding Path=NumberOfIterations}" ClipboardContentBinding="{x:Null}" Header="Iteracje"/>
+            </DataGrid.Columns>
+        </DataGrid>
 
     </Grid>
 </Page>
