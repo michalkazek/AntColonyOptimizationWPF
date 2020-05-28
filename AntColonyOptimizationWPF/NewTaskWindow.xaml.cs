@@ -25,45 +25,32 @@ namespace AntColonyOptimizationWPF
 
         private void btnAddNewTask_Click(object sender, RoutedEventArgs e)
         {
-            int alfa;
-            int beta;
-            int numberOfAnts;
-            int numberOfIterations;
-            int numberOfRepetitions;
-            bool flag = true;
+            var collection = new List<TextBox>() {txtAlfa, txtBeta, txtNumberOfAnts, txtNumberOfIterations, txtNumberOfRepetitions};
+            var intCollection = new List<int>();
+            int output;
 
-            if(!(int.TryParse(txtAlfa.Text, out alfa) && alfa > 0))
-            {
-                txtAlfa.BorderBrush = Brushes.Red;
-                flag = false;
-            }
-            if (!(int.TryParse(txtBeta.Text, out beta) && beta > 0))
-            {
-                txtBeta.BorderBrush = Brushes.Red;
-                flag = false;
-            }
-            if (!(int.TryParse(txtNumberOfAnts.Text, out numberOfAnts) && numberOfAnts > 0))
-            {
-                txtNumberOfAnts.BorderBrush = Brushes.Red;
-                flag = false;
-            }
-            if (!(int.TryParse(txtNumberOfIterations.Text, out numberOfIterations) && alfa > 0))
-            {
-                txtNumberOfIterations.BorderBrush = Brushes.Red;
-                flag = false;
-            }
-            if (!(int.TryParse(txtNumberOfRepetitions.Text, out numberOfRepetitions) && numberOfRepetitions > 0))
-            {
-                txtNumberOfRepetitions.BorderBrush = Brushes.Red;
-                flag = false;
+            foreach (var item in collection)
+            {                
+                if (int.TryParse(item.Text, out output) && output > 0)
+                {
+                    item.BorderBrush = Brushes.Black;
+                    intCollection.Add(output);
+                }
+                else
+                {
+                    item.BorderBrush = Brushes.Red;
+                }
             }
 
-            if (flag)
+            if (intCollection.Count == 5)
             {
                 mainMenuPage.dgTaskList.Items.Add(new
                 {
-                    Alfa = alfa,
-                    Beta = beta,
+                    Alfa = intCollection[0],
+                    Beta = intCollection[1],
+                    NumberOfAnts = intCollection[2],
+                    NumberOfIterations = intCollection[3],
+                    NumberOfRepetitons = intCollection[4]
                 });
             }            
         }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AntColonyOptimizationWPF"
         mc:Ignorable="d"
-        Title="NewTaskWindow" Height="500" Width="400">
+        Title="NewTaskWindow" Height="550" Width="400">
     <Grid>
         <TextBlock x:Name="lblIntroduction"  TextAlignment="Center" Text="Dodawanie polecenia" HorizontalAlignment="Left" Margin="50,30,0,0" VerticalAlignment="Top" Height="50" Width="300" FontSize="30" TextWrapping="WrapWithOverflow"/>
         <Label x:Name="lblFileName" Content="Analizowany plik" HorizontalAlignment="Left" Margin="40,100,0,0" VerticalAlignment="Top" FontSize="16"/>
@@ -19,7 +19,8 @@
         <TextBox x:Name="txtNumberOfIterations" HorizontalAlignment="Left" Height="25" Margin="260,305,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="65" FontSize="14" BorderBrush="Black" TextAlignment="Right"/>
         <Label x:Name="lblNumberOfRepetitions" Content="Liczba powtórzeń" HorizontalAlignment="Left" Margin="40,350,0,0" VerticalAlignment="Top" FontSize="16"/>
         <TextBox x:Name="txtNumberOfRepetitions" HorizontalAlignment="Left" Height="25" Margin="260,355,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="65" FontSize="14" BorderBrush="Black" TextAlignment="Right"/>
-        <Button x:Name="btnAddNewTask" Content="Dodaj" HorizontalAlignment="Left" Margin="250,400,0,0" VerticalAlignment="Top" Width="90" Click="btnAddNewTask_Click" Height="40" FontSize="16" Background="#FF9EDE68"/>
+        <TextBlock x:Name="txtAddingResultMessage"  TextAlignment="Center" Text="" HorizontalAlignment="Left" Margin="50,405,0,0" VerticalAlignment="Top" Height="30" Width="300" FontSize="18" TextWrapping="WrapWithOverflow"/>
+        <Button x:Name="btnAddNewTask" Content="Dodaj" HorizontalAlignment="Left" Margin="250,450,0,0" VerticalAlignment="Top" Width="90" Click="btnAddNewTask_Click" Height="40" FontSize="16" Background="#FF9EDE68"/>
     
     </Grid>
 </Window>
