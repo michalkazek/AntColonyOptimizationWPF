@@ -10,25 +10,23 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace AntColonyOptimizationWPF
 {
-    /// <summary>
-    /// Interaction logic for MainMenuPage.xaml
-    /// </summary>
-    public partial class MainMenuPage : Page
+    public partial class NewTaskWindow : Window
     {
-        public MainMenuPage()
+        private MainMenuPage mainMenuPage;
+        public NewTaskWindow(MainMenuPage mainMenuPage)
         {
             InitializeComponent();
+            this.mainMenuPage = mainMenuPage;
         }
 
-        private void btnAddNewTask_Click(object sender, RoutedEventArgs e)
+        private void button_Click(object sender, RoutedEventArgs e)
         {
-            var x = new NewTaskWindow(this);
-            x.Show();
+            mainMenuPage.dgTaskList.Items.Add(new { FileName = "berlin" });
         }
     }
+    
 }
