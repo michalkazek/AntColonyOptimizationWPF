@@ -23,10 +23,49 @@ namespace AntColonyOptimizationWPF
             this.mainMenuPage = mainMenuPage;
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void btnAddNewTask_Click(object sender, RoutedEventArgs e)
         {
-            mainMenuPage.dgTaskList.Items.Add(new { FileName = "berlin" });
+            int alfa;
+            int beta;
+            int numberOfAnts;
+            int numberOfIterations;
+            int numberOfRepetitions;
+            bool flag = true;
+
+            if(!(int.TryParse(txtAlfa.Text, out alfa) && alfa > 0))
+            {
+                txtAlfa.BorderBrush = Brushes.Red;
+                flag = false;
+            }
+            if (!(int.TryParse(txtBeta.Text, out beta) && beta > 0))
+            {
+                txtBeta.BorderBrush = Brushes.Red;
+                flag = false;
+            }
+            if (!(int.TryParse(txtNumberOfAnts.Text, out numberOfAnts) && numberOfAnts > 0))
+            {
+                txtNumberOfAnts.BorderBrush = Brushes.Red;
+                flag = false;
+            }
+            if (!(int.TryParse(txtNumberOfIterations.Text, out numberOfIterations) && alfa > 0))
+            {
+                txtNumberOfIterations.BorderBrush = Brushes.Red;
+                flag = false;
+            }
+            if (!(int.TryParse(txtNumberOfRepetitions.Text, out numberOfRepetitions) && numberOfRepetitions > 0))
+            {
+                txtNumberOfRepetitions.BorderBrush = Brushes.Red;
+                flag = false;
+            }
+
+            if (flag)
+            {
+                mainMenuPage.dgTaskList.Items.Add(new
+                {
+                    Alfa = alfa,
+                    Beta = beta,
+                });
+            }            
         }
-    }
-    
+    }    
 }
