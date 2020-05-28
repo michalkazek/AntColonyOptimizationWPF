@@ -7,8 +7,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="600">
     <Grid>
-        <TextBlock x:Name="lblIntroduction"  TextAlignment="Center" Text="Witaj w aplikacji służącej do rozwiązywania problemu komiwojażera przy użyciu algorytmu mrowiskowego.&#xD;&#xA;Kliknij START aby rozpocząć." HorizontalAlignment="Left" Margin="75,100,0,0" VerticalAlignment="Top" Height="138" Width="450" FontSize="18" TextWrapping="WrapWithOverflow"/>
-        <Button x:Name="btnStart" Content="START" HorizontalAlignment="Left" Margin="200,344,0,0" VerticalAlignment="Top" Width="200" Height="50" FontSize="20" Click="btnStart_Click"/>
-        <Label x:Name="lblCopyright" Content="Michał Kazek 2020." HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="230,420,0,0" VerticalAlignment="Top" Height="30" Width="150" FontSize="14"/>
+        <Frame x:Name="frameMain" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

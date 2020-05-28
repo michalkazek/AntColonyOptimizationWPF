@@ -16,14 +16,13 @@ using System.Windows.Shapes;
 namespace AntColonyOptimizationWPF
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for MainMenuPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainMenuPage : Page
     {
-        public MainWindow()
+        public MainMenuPage()
         {
             InitializeComponent();
-            frameMain.NavigationService.Navigate(new StartPage());
         }
     }
 }
