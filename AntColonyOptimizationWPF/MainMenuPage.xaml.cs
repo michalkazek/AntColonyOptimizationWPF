@@ -15,25 +15,20 @@ using System.Windows.Shapes;
 
 namespace AntColonyOptimizationWPF
 {
-    /// <summary>
-    /// Interaction logic for MainMenuPage.xaml
-    /// </summary>
     public partial class MainMenuPage : Page
     {
+        public List<DataRow> myList { get; set; }
         public MainMenuPage()
         {
             InitializeComponent();
+            myList = new List<DataRow>();
+            dgTaskList.ItemsSource = myList;
         }
 
         private void btnAddNewTask_Click(object sender, RoutedEventArgs e)
         {
-            var x = new NewTaskWindow(this);
-            x.Show();
-        }
-
-        private void dgTaskList_BeginningEdit(object sender, DataGridBeginningEditEventArgs e)
-        {
-            e.Cancel = true;
+            var window = new NewTaskWindow(this);
+            window.Show();
         }
 
         private void btnStart_Click(object sender, RoutedEventArgs e)
@@ -41,16 +36,20 @@ namespace AntColonyOptimizationWPF
             NavigationService.Navigate(new RunPage(dgTaskList.Items));
         }
 
-        private void dgTaskList_SelectedCellsChanged(object sender, SelectedCellsChangedEventArgs e)
+        private void btnDeleteRow_Click(object sender, RoutedEventArgs e)
         {
-            IList<DataGridCellInfo> selectedcells = e.AddedCells;
-
-            //Get the value of each newly selected cell
-            foreach (DataGridCellInfo di in selectedcells)
-            {
-                var pi = di.Item.GetType().GetProperty("Alfa");
-                lblIntroduction.Text = pi.GetValue(di, null).ToString();
-            }
+            myList.Remove((DataRow)dgTaskList.SelectedItem);
+            dgTaskList.Items.Refresh();
         }
+    }
+
+    public class DataRow
+    {
+        public string FileName { get; set; }
+        public int Alfa { get; set; }
+        public int Beta { get; set; }
+        public int NumberOfAnts { get; set; }
+        public int NumberOfIterations { get; set; }
+        public int NumberOfRepetitions { get; set; }
     }
 }

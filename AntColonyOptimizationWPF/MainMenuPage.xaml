@@ -10,8 +10,7 @@
 
     <Grid>
         <TextBlock x:Name="lblIntroduction"  TextAlignment="Center" Text="Lista poleceń" HorizontalAlignment="Left" Margin="200,30,0,0" VerticalAlignment="Top" Height="50" Width="200" FontSize="30" TextWrapping="WrapWithOverflow"/>
-        <Button x:Name="btnAddNewTask" Content="+" HorizontalAlignment="Left" Margin="59,387,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnAddNewTask_Click" FontSize="24"/>
-        <DataGrid x:Name="dgTaskList" HorizontalAlignment="Left" Margin="59,100,0,0" VerticalAlignment="Top" Height="260" Width="472" AutoGenerateColumns="False" CanUserReorderColumns="False" HeadersVisibility="Column" BeginningEdit="dgTaskList_BeginningEdit" SelectedCellsChanged="dgTaskList_SelectedCellsChanged">
+        <DataGrid x:Name="dgTaskList" ItemsSource="{Binding myList}" CanUserAddRows="False"  HorizontalAlignment="Left" Margin="59,100,0,0" VerticalAlignment="Top" Height="260" Width="472" AutoGenerateColumns="False" CanUserReorderColumns="False" HeadersVisibility="Column">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Path=FileName}" ClipboardContentBinding="{x:Null}" Header="Nazwa pliku" Width="90"/>
                 <DataGridTextColumn Binding="{Binding Path=Alfa}" ClipboardContentBinding="{x:Null}" Header="Alfa" Width="40"/>
@@ -22,5 +21,7 @@
             </DataGrid.Columns>
         </DataGrid>
         <Button x:Name="btnStart" Content="START" HorizontalAlignment="Left" Margin="468,387,0,0" VerticalAlignment="Top" Width="100" Height="50" Click="btnStart_Click"/>
+        <Button x:Name="btnAddNewTask" Content="+" HorizontalAlignment="Left" Margin="59,387,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnAddNewTask_Click" FontSize="24"/>
+        <Button x:Name="btnDeleteRow" Content="-" HorizontalAlignment="Left" Margin="162,387,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnDeleteRow_Click" FontSize="24"/>
     </Grid>
 </Page>

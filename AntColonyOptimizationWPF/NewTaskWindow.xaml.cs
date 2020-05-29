@@ -55,15 +55,16 @@ namespace AntColonyOptimizationWPF
 
             if (inputValuesCollection.Count == 5)
             {
-                mainMenuPage.dgTaskList.Items.Add(new
+                mainMenuPage.myList.Add(new DataRow
                 {
-                    FileName = cbFileNameList.SelectedItem,
+                    FileName = cbFileNameList.SelectedItem.ToString(),
                     Alfa = inputValuesCollection[0],
                     Beta = inputValuesCollection[1],
                     NumberOfAnts = inputValuesCollection[2],
                     NumberOfIterations = inputValuesCollection[3],
                     NumberOfRepetitions = inputValuesCollection[4]
                 });
+                mainMenuPage.dgTaskList.Items.Refresh();
                 txtAddingResultMessage.Text = "Dodawanie zakończone powodzeniem!";
                 txtAddingResultMessage.Foreground = Brushes.Green;
             }            
