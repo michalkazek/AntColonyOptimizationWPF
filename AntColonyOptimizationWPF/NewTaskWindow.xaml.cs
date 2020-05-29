@@ -65,6 +65,7 @@ namespace AntColonyOptimizationWPF
                     NumberOfRepetitions = inputValuesCollection[4]
                 });
                 mainMenuPage.dgTaskList.Items.Refresh();
+                mainMenuPage.CheckIfThereIsAtLeastOneRowInDataGrid();
                 txtAddingResultMessage.Text = "Dodawanie zakończone powodzeniem!";
                 txtAddingResultMessage.Foreground = Brushes.Green;
             }            

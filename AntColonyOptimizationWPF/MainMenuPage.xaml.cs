@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -41,6 +42,7 @@ namespace AntColonyOptimizationWPF
         {
             myList.Remove((DataRow)dgTaskList.SelectedItem);
             dgTaskList.Items.Refresh();
+            CheckIfThereIsAtLeastOneRowInDataGrid();
         }
 
         private void btnAddTasksFromFile_Click(object sender, RoutedEventArgs e)
@@ -75,9 +77,30 @@ namespace AntColonyOptimizationWPF
                             NumberOfRepetitions = Convert.ToInt32(splittedLine[5])
                         });
                         dgTaskList.Items.Refresh();
+                        CheckIfThereIsAtLeastOneRowInDataGrid();
                     }
                 }
             } catch (Exception) { }     
+        }
+
+        public void CheckIfThereIsAtLeastOneRowInDataGrid()
+        {
+            if(dgTaskList.Items.Count > 0)
+            {
+                btnStart.IsEnabled = true;
+            }
+            else
+            {
+                btnStart.IsEnabled = false;
+            }
+        }
+
+        private void dgTaskList_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            if(dgTaskList.CurrentColumn != dgTaskList.Columns[0])
+            {
+                e.Handled = new Regex("[^0-9]+").IsMatch(e.Text);
+            }           
         }
     }
 
