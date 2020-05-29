@@ -30,5 +30,27 @@ namespace AntColonyOptimizationWPF
             var x = new NewTaskWindow(this);
             x.Show();
         }
+
+        private void dgTaskList_BeginningEdit(object sender, DataGridBeginningEditEventArgs e)
+        {
+            e.Cancel = true;
+        }
+
+        private void btnStart_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new RunPage(dgTaskList.Items));
+        }
+
+        private void dgTaskList_SelectedCellsChanged(object sender, SelectedCellsChangedEventArgs e)
+        {
+            IList<DataGridCellInfo> selectedcells = e.AddedCells;
+
+            //Get the value of each newly selected cell
+            foreach (DataGridCellInfo di in selectedcells)
+            {
+                var pi = di.Item.GetType().GetProperty("Alfa");
+                lblIntroduction.Text = pi.GetValue(di, null).ToString();
+            }
+        }
     }
 }
