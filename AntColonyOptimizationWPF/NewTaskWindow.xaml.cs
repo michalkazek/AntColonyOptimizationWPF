@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +22,14 @@ namespace AntColonyOptimizationWPF
         {
             InitializeComponent();
             this.mainMenuPage = mainMenuPage;
+            ReadAllFileNamesInDataFolder();
+        }
+
+        private void ReadAllFileNamesInDataFolder()
+        {
+            DirectoryInfo di = new DirectoryInfo(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + $@"\Data\");
+            var fileListInDirectory = di.GetFiles("*.txt");
+            fileListInDirectory.ToList().ForEach(item => cbFileNameList.Items.Add(item));
         }
 
         private void btnAddNewTask_Click(object sender, RoutedEventArgs e)
@@ -69,7 +78,9 @@ namespace AntColonyOptimizationWPF
             var result = dlg.ShowDialog();
             if (result == true)
             {
-                txtFileName.Text = dlg.SafeFileName;
+                //txtFileName.Text = dlg.SafeFileName;
+                //comboBox.Text = dlg.SafeFileName;
+                //comboBox.Items.Add(dlg.SafeFileName);
                 //txtFileName.Text = dlg.FileName;
             }
         }
