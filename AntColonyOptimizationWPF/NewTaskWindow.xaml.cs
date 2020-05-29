@@ -84,5 +84,10 @@ namespace AntColonyOptimizationWPF
                 //txtFileName.Text = dlg.FileName;
             }
         }
+
+        private void cbFileNameList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            btnAddNewTask.IsEnabled = true;
+        }
     }    
 }
