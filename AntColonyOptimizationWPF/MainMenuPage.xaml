@@ -23,5 +23,6 @@
         <Button x:Name="btnStart" Content="START" HorizontalAlignment="Left" Margin="468,387,0,0" VerticalAlignment="Top" Width="100" Height="50" Click="btnStart_Click"/>
         <Button x:Name="btnAddNewTask" Content="+" HorizontalAlignment="Left" Margin="59,387,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnAddNewTask_Click" FontSize="24"/>
         <Button x:Name="btnDeleteRow" Content="-" HorizontalAlignment="Left" Margin="162,387,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnDeleteRow_Click" FontSize="24"/>
+        <Button x:Name="btnAddTasksFromFile" Content="V" HorizontalAlignment="Left" Margin="266,387,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnAddTasksFromFile_Click" FontSize="24"/>
     </Grid>
 </Page>

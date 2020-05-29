@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,6 +41,43 @@ namespace AntColonyOptimizationWPF
         {
             myList.Remove((DataRow)dgTaskList.SelectedItem);
             dgTaskList.Items.Refresh();
+        }
+
+        private void btnAddTasksFromFile_Click(object sender, RoutedEventArgs e)
+        {
+            var dialogBox = new Microsoft.Win32.OpenFileDialog();
+            dialogBox.Filter = "Text documents (.txt)|*.txt";
+
+            var openingResult = dialogBox.ShowDialog();
+            if (openingResult == true)
+            {
+                ReadInputParamteres(dialogBox.FileName);
+            }
+        }
+
+        private void ReadInputParamteres(string filePath)
+        {
+            try
+            {
+                using (StreamReader reader = new StreamReader(filePath))
+                {
+                    string currentLine;
+                    while ((currentLine = reader.ReadLine()) != null)
+                    {
+                        var splittedLine = currentLine.Split(',');
+                        myList.Add(new DataRow
+                        {
+                            FileName = splittedLine[0],
+                            Alfa = Convert.ToInt32(splittedLine[1]),
+                            Beta = Convert.ToInt32(splittedLine[2]),
+                            NumberOfAnts = Convert.ToInt32(splittedLine[3]),
+                            NumberOfIterations = Convert.ToInt32(splittedLine[4]),
+                            NumberOfRepetitions = Convert.ToInt32(splittedLine[5])
+                        });
+                        dgTaskList.Items.Refresh();
+                    }
+                }
+            } catch (Exception) { }     
         }
     }
 

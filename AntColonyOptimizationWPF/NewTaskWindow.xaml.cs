@@ -70,23 +70,6 @@ namespace AntColonyOptimizationWPF
             }            
         }
 
-        private void btnPickFile_Click(object sender, RoutedEventArgs e)
-        {
-            var dlg = new Microsoft.Win32.OpenFileDialog();
-            dlg.FileName = "Document"; // Default file name
-            dlg.DefaultExt = ".txt"; // Default file extension
-            dlg.Filter = "Text documents (.txt)|*.txt"; // Filter files by extension
-
-            var result = dlg.ShowDialog();
-            if (result == true)
-            {
-                //txtFileName.Text = dlg.SafeFileName;
-                //comboBox.Text = dlg.SafeFileName;
-                //comboBox.Items.Add(dlg.SafeFileName);
-                //txtFileName.Text = dlg.FileName;
-            }
-        }
-
         private void cbFileNameList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             btnAddNewTask.IsEnabled = true;
