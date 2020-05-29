@@ -57,11 +57,12 @@ namespace AntColonyOptimizationWPF
             {
                 mainMenuPage.dgTaskList.Items.Add(new
                 {
+                    FileName = cbFileNameList.SelectedItem,
                     Alfa = inputValuesCollection[0],
                     Beta = inputValuesCollection[1],
                     NumberOfAnts = inputValuesCollection[2],
                     NumberOfIterations = inputValuesCollection[3],
-                    NumberOfRepetitons = inputValuesCollection[4]
+                    NumberOfRepetitions = inputValuesCollection[4]
                 });
                 txtAddingResultMessage.Text = "Dodawanie zakończone powodzeniem!";
                 txtAddingResultMessage.Foreground = Brushes.Green;

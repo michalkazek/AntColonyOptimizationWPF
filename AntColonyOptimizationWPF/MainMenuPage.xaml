@@ -5,23 +5,22 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:AntColonyOptimizationWPF"
       mc:Ignorable="d" 
-      d:DesignHeight="500" d:DesignWidth="600"
+      d:DesignHeight="470" d:DesignWidth="590"
       Title="MainMenuPage">
 
     <Grid>
-        <TextBlock x:Name="lblIntroduction"  TextAlignment="Center" Text="Lista poleceń" HorizontalAlignment="Left" Margin="200,40,0,0" VerticalAlignment="Top" Height="50" Width="200" FontSize="30" TextWrapping="WrapWithOverflow"/>
-        <Button x:Name="btnAddNewTask" Content="Button" HorizontalAlignment="Left" Margin="506,132,0,0" VerticalAlignment="Top" Width="58" Height="45" Click="btnAddNewTask_Click"/>
-        <DataGrid x:Name="dgTaskList" HorizontalAlignment="Left" Margin="58,114,0,0" VerticalAlignment="Top" Height="297" Width="431" AutoGenerateColumns="False">
+        <TextBlock x:Name="lblIntroduction"  TextAlignment="Center" Text="Lista poleceń" HorizontalAlignment="Left" Margin="200,30,0,0" VerticalAlignment="Top" Height="50" Width="200" FontSize="30" TextWrapping="WrapWithOverflow"/>
+        <Button x:Name="btnAddNewTask" Content="+" HorizontalAlignment="Left" Margin="59,387,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnAddNewTask_Click" FontSize="24"/>
+        <DataGrid x:Name="dgTaskList" HorizontalAlignment="Left" Margin="59,100,0,0" VerticalAlignment="Top" Height="260" Width="472" AutoGenerateColumns="False" CanUserReorderColumns="False" HeadersVisibility="Column">
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Path=Id}" ClipboardContentBinding="{x:Null}" Header="ID" HeaderStringFormat=""/>
-                <DataGridTextColumn Binding="{Binding Path=FileName}" ClipboardContentBinding="{x:Null}" Header="Nazwa pliku"/>
-                <DataGridTextColumn Binding="{Binding Path=Alfa}" ClipboardContentBinding="{x:Null}" Header="Alfa"/>
-                <DataGridTextColumn Binding="{Binding Path=Beta}" ClipboardContentBinding="{x:Null}" Header="Beta"/>
-                <DataGridTextColumn Binding="{Binding Path=NumberOfAnts}" ClipboardContentBinding="{x:Null}" Header="Liczba mrówek"/>
-                <DataGridTextColumn Binding="{Binding Path=NumberOfIterations}" ClipboardContentBinding="{x:Null}" Header="Liczba iteracji"/>
-                <DataGridTextColumn Binding="{Binding Path=NumberOfRepetitions}" ClipboardContentBinding="{x:Null}" Header="Liczba powtórzeń"/>
+                <DataGridTextColumn Binding="{Binding Path=FileName}" ClipboardContentBinding="{x:Null}" Header="Nazwa pliku" Width="90"/>
+                <DataGridTextColumn Binding="{Binding Path=Alfa}" ClipboardContentBinding="{x:Null}" Header="Alfa" Width="40"/>
+                <DataGridTextColumn Binding="{Binding Path=Beta}" ClipboardContentBinding="{x:Null}" Header="Beta" Width="40"/>
+                <DataGridTextColumn Binding="{Binding Path=NumberOfAnts}" ClipboardContentBinding="{x:Null}" Header="Liczba mrówek" Width="90"/>
+                <DataGridTextColumn Binding="{Binding Path=NumberOfIterations}" ClipboardContentBinding="{x:Null}" Header="Liczba iteracji" Width="90"/>
+                <DataGridTextColumn Binding="{Binding Path=NumberOfRepetitions}" ClipboardContentBinding="{x:Null}" Header="Liczba powtórzeń" Width="120"/>
             </DataGrid.Columns>
         </DataGrid>
-
+        <Button x:Name="btnStart" Content="START" HorizontalAlignment="Left" Margin="468,387,0,0" VerticalAlignment="Top" Width="100" Height="50"/>
     </Grid>
 </Page>

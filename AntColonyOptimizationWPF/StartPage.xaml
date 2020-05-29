@@ -5,12 +5,12 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:AntColonyOptimizationWPF"
       mc:Ignorable="d" 
-      d:DesignHeight="500" d:DesignWidth="600"
+      d:DesignHeight="470" d:DesignWidth="590"
       Title="StartPage">
 
     <Grid>
-        <TextBlock x:Name="lblIntroduction"  TextAlignment="Center" Text="Witaj w aplikacji służącej do rozwiązywania problemu komiwojażera przy użyciu algorytmu mrowiskowego.&#xD;&#xA;Kliknij START aby rozpocząć." HorizontalAlignment="Left" Margin="75,100,0,0" VerticalAlignment="Top" Height="138" Width="450" FontSize="18" TextWrapping="WrapWithOverflow"/>
-        <Button x:Name="btnStart" Content="START" HorizontalAlignment="Left" Margin="200,344,0,0" VerticalAlignment="Top" Width="200" Height="50" FontSize="20" Click="btnStart_Click"/>
-        <Label x:Name="lblCopyright" Content="Michał Kazek 2020." HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="230,420,0,0" VerticalAlignment="Top" Height="30" Width="150" FontSize="14"/>
+        <TextBlock x:Name="lblIntroduction"  TextAlignment="Center" Text="Witaj w aplikacji służącej do rozwiązywania problemu komiwojażera przy użyciu algorytmu mrowiskowego.&#xD;&#xA;Kliknij START aby rozpocząć." HorizontalAlignment="Left" Margin="70,100,0,0" VerticalAlignment="Top" Height="138" Width="450" FontSize="18" TextWrapping="WrapWithOverflow"/>
+        <Button x:Name="btnStart" Content="START" HorizontalAlignment="Left" Margin="195,345,0,0" VerticalAlignment="Top" Width="200" Height="50" FontSize="20" Click="btnStart_Click"/>
+        <Label x:Name="lblCopyright" Content="Michał Kazek 2020." HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="225,420,0,0" VerticalAlignment="Top" Height="30" Width="150" FontSize="14"/>
     </Grid>
 </Page>
