@@ -35,7 +35,6 @@ namespace AntColonyOptimizationAlgorithm
         {
             GeneratePrerequisite(fileName);
             Start(numberOfAnts, numberOfIterations);            
-            //PrintSummary(DistanceChecker.CheckIsBestRouteCorrect(MoveAntToNextCity, BestFoundRoute, BestFoundDistance));
             FileWriter.SaveSummaryIntoFile(FirstFoundDistance, BestFoundDistance, BestFoundDistanceIteration, Alfa, Beta, numberOfAnts, numberOfIterations, fileName);          
         }        
 
@@ -149,11 +148,6 @@ namespace AntColonyOptimizationAlgorithm
                     BestFoundDistanceIteration = iteration;
                 }
             });
-        }
-
-        private void PrintSummary(string isBestRouteCorrect)
-        {
-            Console.WriteLine($"The shortest route found by an ant is {BestFoundDistance}. [{isBestRouteCorrect}]");
         }
     }
 }
