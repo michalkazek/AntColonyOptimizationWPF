@@ -25,7 +25,7 @@ namespace AntColonyOptimizationAlgorithm
 
             List<string> splittedLine = new List<string>();
 
-            string filePath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + $@"\Data\{FileName}.txt";
+            string filePath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + $@"\Data\{FileName}";
 
             using (StreamReader reader = new StreamReader(filePath))
             {
@@ -51,7 +51,6 @@ namespace AntColonyOptimizationAlgorithm
                     splittedLine.Clear();
                 }
             }            
-            Console.Clear();
             return distanceMatrix;
         }
 
