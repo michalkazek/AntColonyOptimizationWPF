@@ -27,7 +27,7 @@ namespace AntColonyOptimizationWPF
 
         private void ReadAllFileNamesInDataFolder()
         {
-            DirectoryInfo di = new DirectoryInfo(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + $@"\Data\");
+            DirectoryInfo di = new DirectoryInfo(Directory.GetCurrentDirectory() + $@"\Data\");
             var fileListInDirectory = di.GetFiles("*.txt");
             fileListInDirectory.ToList().ForEach(item => cbFileNameList.Items.Add(item));
         }

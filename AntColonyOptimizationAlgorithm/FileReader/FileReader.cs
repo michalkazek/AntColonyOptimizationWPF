@@ -25,7 +25,7 @@ namespace AntColonyOptimizationAlgorithm
 
             List<string> splittedLine = new List<string>();
 
-            string filePath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + $@"\Data\{FileName}";
+            string filePath = Directory.GetCurrentDirectory() + $@"\Data\{FileName}";
 
             using (StreamReader reader = new StreamReader(filePath))
             {

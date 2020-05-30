@@ -37,7 +37,15 @@ namespace AntColonyOptimizationWPF
                     numericValuesList.Add(Convert.ToInt32(propertyList[i].GetValue(task, null)));
                 }
                 apllicationParametersDictionary.Add(propertyList[0].GetValue(task, null).ToString(), numericValuesList);
-                AntColonyOptimizationAlgorithm.Application.Run(apllicationParametersDictionary);
+                try
+                {
+                    AntColonyOptimizationAlgorithm.Application.Run(apllicationParametersDictionary);
+                } 
+                catch (Exception ex)
+                {
+                    txtTest.Text = ex.Message;
+                }
+                
             }
         }
     }

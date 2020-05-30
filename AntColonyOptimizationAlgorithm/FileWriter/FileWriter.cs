@@ -12,7 +12,7 @@ namespace AntColonyOptimizationAlgorithm
         public static void SaveSummaryIntoFile(float firstFoundDistance, float bestFoundDistance, int bestFoundDistanceIteration, float alfa, float beta, int numberOfAnts, int numberOfIterations, string inputFileName)
         {
             var fileName = $"{inputFileName}-{alfa}_{beta}_{numberOfAnts}_{numberOfIterations}";
-            var path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + $@"\Results\{fileName}.csv";
+            var path = Directory.GetCurrentDirectory() + $@"\Results\{fileName}.csv";
             using (var outputFile = new StreamWriter(path, append: true))
             {
                 outputFile.WriteLine($"{bestFoundDistance}; {bestFoundDistanceIteration}; {firstFoundDistance}");
