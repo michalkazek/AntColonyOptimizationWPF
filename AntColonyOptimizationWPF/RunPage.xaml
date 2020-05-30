@@ -10,6 +10,5 @@
 
     <Grid>
         <TextBlock x:Name="txtTest" HorizontalAlignment="Left" Margin="42,39,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="379" Width="500"/>
-
     </Grid>
 </Page>

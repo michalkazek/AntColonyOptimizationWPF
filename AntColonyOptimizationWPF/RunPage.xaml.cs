@@ -17,9 +17,6 @@ using System.Windows.Shapes;
 
 namespace AntColonyOptimizationWPF
 {
-    /// <summary>
-    /// Interaction logic for RunPage.xaml
-    /// </summary>
     public partial class RunPage : Page
     {
         public RunPage(ItemCollection taskCollection)
@@ -42,11 +39,6 @@ namespace AntColonyOptimizationWPF
                 apllicationParametersDictionary.Add(propertyList[0].GetValue(task, null).ToString(), numericValuesList);
                 AntColonyOptimizationAlgorithm.Application.Run(apllicationParametersDictionary);
             }
-        }
-
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-            //AntColonyOptimizationAlgorithm.Application.Run(collection);
         }
     }
 }
