@@ -25,24 +25,28 @@ namespace AntColonyOptimizationWPF
         public RunPage(ItemCollection taskCollection)
         {
             InitializeComponent();
-            ShowFullCollection(taskCollection);
+            ParseItemCollectionIntoDictionary(taskCollection);
+        }
+        private void ParseItemCollectionIntoDictionary(ItemCollection taskCollection)
+        {
+            foreach (var task in taskCollection)
+            {
+                var apllicationParametersDictionary = new Dictionary<string, List<int>>();
+                var propertyList = task.GetType().GetProperties();
+                var numericValuesList = new List<int>();
+
+                for (int i = 1; i < propertyList.Length; i++)
+                {
+                    numericValuesList.Add(Convert.ToInt32(propertyList[i].GetValue(task, null)));
+                }
+                apllicationParametersDictionary.Add(propertyList[0].GetValue(task, null).ToString(), numericValuesList);
+                AntColonyOptimizationAlgorithm.Application.Run(apllicationParametersDictionary);
+            }
         }
 
-        private void ShowFullCollection(ItemCollection taskCollection)
+        private void button_Click(object sender, RoutedEventArgs e)
         {
-            
-            string fullText = "";
-            for (int i = 0; i < 2; i++)
-            {
-                var item = taskCollection[i];
-                var pi = item.GetType().GetProperties();
-                foreach (var item2 in pi)
-                {
-                    fullText += item2.GetValue(item, null);
-                }
-                
-            }
-            txtTest.Text = fullText;
+            //AntColonyOptimizationAlgorithm.Application.Run(collection);
         }
     }
 }

@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AntColonyOptimizationWPF", "AntColonyOptimizationWPF\AntColonyOptimizationWPF.csproj", "{BBBE9F1B-6BB5-4447-A2FE-B5FFD8A2688A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AntColonyOptimizationAlgorithm", "AntColonyOptimizationAlgorithm\AntColonyOptimizationAlgorithm.csproj", "{A21A1254-1369-4F1B-A6CC-EC2B6D314B47}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{BBBE9F1B-6BB5-4447-A2FE-B5FFD8A2688A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BBBE9F1B-6BB5-4447-A2FE-B5FFD8A2688A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BBBE9F1B-6BB5-4447-A2FE-B5FFD8A2688A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A21A1254-1369-4F1B-A6CC-EC2B6D314B47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A21A1254-1369-4F1B-A6CC-EC2B6D314B47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A21A1254-1369-4F1B-A6CC-EC2B6D314B47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A21A1254-1369-4F1B-A6CC-EC2B6D314B47}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
