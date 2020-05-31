@@ -33,7 +33,7 @@ namespace AntColonyOptimizationWPF
             window.Show();
         }
 
-        private void btnStart_Click(object sender, RoutedEventArgs e)
+        private void btnNext_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new RunPage(dgTaskList.Items));
         }
@@ -87,11 +87,11 @@ namespace AntColonyOptimizationWPF
         {
             if(dgTaskList.Items.Count > 0)
             {
-                btnStart.IsEnabled = true;
+                btnNext.IsEnabled = true;
             }
             else
             {
-                btnStart.IsEnabled = false;
+                btnNext.IsEnabled = false;
             }
         }
 

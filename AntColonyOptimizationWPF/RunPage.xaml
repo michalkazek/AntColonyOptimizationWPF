@@ -9,6 +9,8 @@
       Title="RunPage">
 
     <Grid>
-        <TextBlock x:Name="txtTest" HorizontalAlignment="Left" Margin="42,39,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="379" Width="500"/>
+        <TextBlock x:Name="txtTest" HorizontalAlignment="Left" Margin="45,35,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="39" Width="500"/>
+        <ProgressBar x:Name="prgCurrentTask" HorizontalAlignment="Left" Height="41" Margin="45,125,0,0" VerticalAlignment="Top" Width="487"/>
+        <Button x:Name="btnStart" Content="Button" HorizontalAlignment="Left" Margin="174,349,0,0" VerticalAlignment="Top" Width="247" Height="56" Click="btnStart_Click"/>
     </Grid>
 </Page>

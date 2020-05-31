@@ -19,12 +19,13 @@ namespace AntColonyOptimizationWPF
 {
     public partial class RunPage : Page
     {
+        public ItemCollection taskCollection { get; set; }
         public RunPage(ItemCollection taskCollection)
         {
             InitializeComponent();
-            ParseItemCollectionIntoDictionary(taskCollection);
+            this.taskCollection = taskCollection;       
         }
-        private void ParseItemCollectionIntoDictionary(ItemCollection taskCollection)
+        private void RunAlghorithm()
         {
             foreach (var task in taskCollection)
             {
@@ -39,14 +40,18 @@ namespace AntColonyOptimizationWPF
                 apllicationParametersDictionary.Add(propertyList[0].GetValue(task, null).ToString(), numericValuesList);
                 try
                 {
-                    AntColonyOptimizationAlgorithm.Application.Run(apllicationParametersDictionary);
+                    AntColonyOptimizationAlgorithm.Application.Run(apllicationParametersDictionary, prgCurrentTask);
                 } 
                 catch (Exception ex)
                 {
                     txtTest.Text = ex.Message;
-                }
-                
+                }               
             }
+        }
+
+        private void btnStart_Click(object sender, RoutedEventArgs e)
+        {
+            RunAlghorithm();
         }
     }
 }
