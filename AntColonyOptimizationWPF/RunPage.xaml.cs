@@ -38,13 +38,15 @@ namespace AntColonyOptimizationWPF
                     numericValuesList.Add(Convert.ToInt32(propertyList[i].GetValue(task, null)));
                 }
                 apllicationParametersDictionary.Add(propertyList[0].GetValue(task, null).ToString(), numericValuesList);
+                txtMaxPartialProgress.Text = $"/{apllicationParametersDictionary.First().Value[4].ToString()}";
+
                 try
                 {
-                    AntColonyOptimizationAlgorithm.Application.Run(apllicationParametersDictionary, prgCurrentTask);
+                    AntColonyOptimizationAlgorithm.Application.Run(apllicationParametersDictionary, prgCurrentTask, txtCurrentPartialProgress);
                 } 
                 catch (Exception ex)
                 {
-                    txtTest.Text = ex.Message;
+                    
                 }               
             }
         }
