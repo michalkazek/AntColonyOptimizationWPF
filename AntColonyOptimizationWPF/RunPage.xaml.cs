@@ -52,16 +52,29 @@ namespace AntColonyOptimizationWPF
                     prgCurrentTask.Dispatcher.Invoke(() => prgCurrentTask.Value = (taskCounter * 100 / (double)taskCollection.Count), DispatcherPriority.Background);
                     taskCounter++;
                 } 
-                catch (Exception ex)
+                catch
                 {
-                    
+                    txtIntroduction.Text = "Wystąpił błąd. Spróbuj ponownie.";
                 }               
             }
+            btnStart.Content = "POWTÓRZ";
+            btnStart.IsEnabled = true;
+            btnRestart.IsEnabled = true;
         }
 
         private void btnStart_Click(object sender, RoutedEventArgs e)
         {
+            txtIntroduction.Text = "Trwa działanie algorytmu..";
+            prgCurrentTask.Value = 0;
+            btnStart.IsEnabled = false;
+            btnRestart.IsEnabled = false;
             RunAlghorithm();
+            txtIntroduction.Text = "Algorytm ukończył działanie pomyślnie!";
+        }
+
+        private void btnRestart_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new MainMenuPage());
         }
     }
 }
