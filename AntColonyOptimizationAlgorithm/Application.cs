@@ -17,9 +17,9 @@ namespace AntColonyOptimizationAlgorithm
             var item = inputParameters.First();
             var currentRun = new Alghoritm(item.Value[0], item.Value[1], 0.005f, 0.0000000010f, randomGenerator);
             for (int i = 1; i < item.Value[4]+1; i++)
-            {
+            {               
+                progressBar.Dispatcher.Invoke(() => progressBar.Value = (Math.Round(i*100/(float)item.Value[4], 0, MidpointRounding.AwayFromZero)), DispatcherPriority.Background);
                 txtCurrentProgress.Text = i.ToString();
-                progressBar.Dispatcher.Invoke(() => progressBar.Value = (i*100/(double)item.Value[4]), DispatcherPriority.Background);
                 currentRun.Run(item.Value[2], item.Value[3], item.Key);
             }                   
         }     

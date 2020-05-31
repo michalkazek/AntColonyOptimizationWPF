@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace AntColonyOptimizationWPF
 {
@@ -27,8 +28,13 @@ namespace AntColonyOptimizationWPF
         }
         private void RunAlghorithm()
         {
+            txtMaxFullProgress.Text = $"/{taskCollection.Count.ToString()}";
+            int taskCounter = 1;
+
             foreach (var task in taskCollection)
             {
+                txtCurrentFullProgress.Text = taskCounter.ToString();              
+
                 var apllicationParametersDictionary = new Dictionary<string, List<int>>();
                 var propertyList = task.GetType().GetProperties();
                 var numericValuesList = new List<int>();
@@ -42,7 +48,9 @@ namespace AntColonyOptimizationWPF
 
                 try
                 {
-                    AntColonyOptimizationAlgorithm.Application.Run(apllicationParametersDictionary, prgCurrentTask, txtCurrentPartialProgress);
+                    AntColonyOptimizationAlgorithm.Application.Run(apllicationParametersDictionary, prgCurrentIteration, txtCurrentPartialProgress);
+                    prgCurrentTask.Dispatcher.Invoke(() => prgCurrentTask.Value = (taskCounter * 100 / (double)taskCollection.Count), DispatcherPriority.Background);
+                    taskCounter++;
                 } 
                 catch (Exception ex)
                 {
