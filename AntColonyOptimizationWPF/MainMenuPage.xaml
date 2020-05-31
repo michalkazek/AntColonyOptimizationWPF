@@ -20,9 +20,9 @@
                 <DataGridTextColumn Binding="{Binding Path=NumberOfRepetitions}" ClipboardContentBinding="{x:Null}" Header="Liczba powtórzeń" Width="120"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="btnNext" Content="DALEJ" HorizontalAlignment="Left" Margin="468,387,0,0" VerticalAlignment="Top" Width="100" Height="50" Click="btnNext_Click" IsEnabled="False"/>
+        <Button x:Name="btnNext" Content="DALEJ" HorizontalAlignment="Left" Margin="411,387,0,0" VerticalAlignment="Top" Width="120" Height="50" Click="btnNext_Click" IsEnabled="False" FontSize="18"/>
         <Button x:Name="btnAddNewTask" Content="+" HorizontalAlignment="Left" Margin="59,387,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnAddNewTask_Click" FontSize="24"/>
-        <Button x:Name="btnDeleteRow" Content="-" HorizontalAlignment="Left" Margin="162,387,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnDeleteRow_Click" FontSize="24"/>
-        <Button x:Name="btnAddTasksFromFile" Content="V" HorizontalAlignment="Left" Margin="266,387,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnAddTasksFromFile_Click" FontSize="24"/>
+        <Button x:Name="btnDeleteRow" Content="-" HorizontalAlignment="Left" Margin="159,387,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnDeleteRow_Click" FontSize="24"/>
+        <Button x:Name="btnAddTasksFromFile" Content="V" HorizontalAlignment="Left" Margin="259,387,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnAddTasksFromFile_Click" FontSize="24"/>
     </Grid>
 </Page>
