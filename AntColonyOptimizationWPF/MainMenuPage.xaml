@@ -9,7 +9,7 @@
       Title="MainMenuPage">
 
     <Grid>
-        <TextBlock x:Name="lblIntroduction"  TextAlignment="Center" Text="Lista poleceń" HorizontalAlignment="Left" Margin="200,30,0,0" VerticalAlignment="Top" Height="50" Width="200" FontSize="30" TextWrapping="WrapWithOverflow"/>
+        <TextBlock x:Name="lblIntroduction" TextAlignment="Center" Text="Lista poleceń" HorizontalAlignment="Left" Margin="200,30,0,0" VerticalAlignment="Top" Height="50" Width="200" FontSize="30" TextWrapping="WrapWithOverflow"/>
         <DataGrid x:Name="dgTaskList" ItemsSource="{Binding myList}" CanUserAddRows="False"  HorizontalAlignment="Left" Margin="59,100,0,0" VerticalAlignment="Top" Height="260" Width="472" AutoGenerateColumns="False" CanUserReorderColumns="False" HeadersVisibility="Column" PreviewTextInput="dgTaskList_PreviewTextInput">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Path=FileName}" ClipboardContentBinding="{x:Null}" Header="Nazwa pliku" Width="90"/>
