@@ -53,7 +53,7 @@ namespace AntColonyOptimizationWPF
                     txtCurrentPartialProgress.Text = "0";
                     txtMaxPartialProgress.Text = $"/{apllicationParametersDictionary.First().Value[4].ToString()}";
 
-                    AntColonyOptimizationAlgorithm.Application.Run(apllicationParametersDictionary, prgCurrentIteration, txtCurrentPartialProgress);
+                    Start(apllicationParametersDictionary, prgCurrentIteration, txtCurrentPartialProgress);
                     prgCurrentTask.Dispatcher.Invoke(() => prgCurrentTask.Value = (++taskCounter * 100 / (double)taskCollection.Count), DispatcherPriority.Background);
                     txtCurrentFullProgress.Text = taskCounter.ToString();                    
                 }                
@@ -66,6 +66,18 @@ namespace AntColonyOptimizationWPF
             btnStart.Content = "POWTÓRZ";
             btnStart.IsEnabled = true;
             btnRestart.IsEnabled = true;
+        }
+        private void Start(Dictionary<string, List<int>> inputParameters, ProgressBar progressBar, TextBlock txtCurrentProgress)
+        {
+            Random randomGenerator = new Random();
+            var item = inputParameters.First();
+            var currentRun = new AntColonyOptimizationAlgorithm.Alghoritm(item.Value[0], item.Value[1], 0.005f, 0.0000000010f, randomGenerator);
+            for (int i = 1; i < item.Value[4] + 1; i++)
+            {
+                currentRun.Run(item.Value[2], item.Value[3], item.Key);
+                progressBar.Dispatcher.Invoke(() => progressBar.Value = (Math.Round(i * 100 / (float)item.Value[4], 0, MidpointRounding.AwayFromZero)), DispatcherPriority.Background);
+                txtCurrentProgress.Text = i.ToString();
+            }
         }
 
         private void btnStart_Click(object sender, RoutedEventArgs e)

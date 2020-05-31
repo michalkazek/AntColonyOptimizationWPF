@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AntColonyOptimizationAlgorithm
 {
-    class Alghoritm
+    public class Alghoritm
     {
         public float Alfa { get; set; }
         public float Beta { get; set; }
