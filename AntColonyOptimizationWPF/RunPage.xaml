@@ -9,16 +9,16 @@
       Title="RunPage">
 
     <Grid>
-        <TextBlock x:Name="txtIntroduction" TextAlignment="Center" HorizontalAlignment="Left" Margin="45,40,0,0" TextWrapping="Wrap" Text="Oczekiwanie na uruchomienie" VerticalAlignment="Top" Height="40" Width="500" FontSize="24"/>
-        <Label x:Name="lblCurrentProgress" HorizontalAlignment="Left" Margin="45,134,0,0" VerticalAlignment="Top" Height="35" Width="150" FontSize="18" Content="Aktualna iteracja:"/>
-        <TextBlock x:Name="txtCurrentPartialProgress" TextAlignment="Right" HorizontalAlignment="Left" Margin="220,139,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="30" Width="60" FontSize="18"/>
-        <TextBlock x:Name="txtMaxPartialProgress" HorizontalAlignment="Left" Margin="280,139,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="30" Width="100" FontSize="18" RenderTransformOrigin="0.136,0.444"/>
+        <TextBlock x:Name="txtIntroduction" TextAlignment="Center" HorizontalAlignment="Left" Margin="45,40,0,0" TextWrapping="Wrap" Text="Oczekiwanie na uruchomienie.." VerticalAlignment="Top" Height="40" Width="500" FontSize="24"/>
+        <Label x:Name="lblCurrentProgress" HorizontalAlignment="Left" Margin="45,134,0,0" VerticalAlignment="Top" Height="35" Width="190" FontSize="18" Content="Ukończone iteracje:"/>
+        <TextBlock x:Name="txtCurrentPartialProgress" TextAlignment="Right" HorizontalAlignment="Left" Margin="240,139,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="30" Width="60" FontSize="18"/>
+        <TextBlock x:Name="txtMaxPartialProgress" HorizontalAlignment="Left" Margin="300,139,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="30" Width="100" FontSize="18" RenderTransformOrigin="0.136,0.444"/>
         <ProgressBar x:Name="prgCurrentIteration" HorizontalAlignment="Left" Height="41" Margin="45,174,0,0" VerticalAlignment="Top" Width="500"/>
         <Button x:Name="btnStart" Content="URUCHOM" HorizontalAlignment="Left" Margin="325,370,0,0" VerticalAlignment="Top" Width="220" Height="50" Click="btnStart_Click" FontSize="18"/>
 
-        <Label x:Name="lblCurrentTask" HorizontalAlignment="Left" Margin="45,241,0,0" VerticalAlignment="Top" Height="35" Width="170" FontSize="18" Content="Aktualne polecenie:"/>
-        <TextBlock x:Name="txtCurrentFullProgress" TextAlignment="Right" HorizontalAlignment="Left" Margin="220,246,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="30" Width="60" FontSize="18"/>
-        <TextBlock x:Name="txtMaxFullProgress" HorizontalAlignment="Left" Margin="280,246,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="30" Width="100" FontSize="18" RenderTransformOrigin="0.136,0.444"/>
+        <Label x:Name="lblCurrentTask" HorizontalAlignment="Left" Margin="45,241,0,0" VerticalAlignment="Top" Height="35" Width="190" FontSize="18" Content="Ukończone polecenia:"/>
+        <TextBlock x:Name="txtCurrentFullProgress" TextAlignment="Right" HorizontalAlignment="Left" Margin="240,246,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="30" Width="60" FontSize="18"/>
+        <TextBlock x:Name="txtMaxFullProgress" HorizontalAlignment="Left" Margin="300,246,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="30" Width="100" FontSize="18" RenderTransformOrigin="0.136,0.444"/>
         <ProgressBar x:Name="prgCurrentTask" HorizontalAlignment="Left" Height="41" Margin="45,281,0,0" VerticalAlignment="Top" Width="500"/>
         <Button x:Name="btnRestart" Content="RESTART PROGRAMU" HorizontalAlignment="Left" Margin="45,370,0,0" VerticalAlignment="Top" Width="220" Height="50" FontSize="18" Click="btnRestart_Click"/>
     </Grid>
