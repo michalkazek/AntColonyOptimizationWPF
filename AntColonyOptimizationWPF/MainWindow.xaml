@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AntColonyOptimizationWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="600">
+        Title="AntColonyOptimization" Height="500" Width="600" Closing="Window_Closing">
     <Grid>
         <Frame x:Name="frameMain" NavigationUIVisibility="Hidden" Width="590" Height="470"/>
     </Grid>
